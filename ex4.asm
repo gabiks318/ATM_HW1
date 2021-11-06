@@ -1,4 +1,4 @@
-.global _start
+.global _start 
 
 .section .text
 _start:
@@ -15,12 +15,12 @@ loop:
     movq (%rax),  %rbx
     cmp %rbx, %rcx
     je end
-    cmp %rbx, %rcx
+    cmp %rcx, %rbx
     jg smaller
 # case bigger than root
 bigger:
     movq 16(%rax), %rdx
-    cmp %rdx, $0
+    cmp $0, %rdx 
     je bigger_found
     movq %rdx, %rax
     jmp loop
@@ -29,8 +29,8 @@ bigger_found:
     jmp end
 # case smaller than root
 smaller:
-    movq 8(%rax), %dx
-    cmp %rdx, $0
+    movq 8(%rax), %rdx
+    cmp $0, %rdx
     je smaller_found
     movq %rdx, %rax
     jmp loop
