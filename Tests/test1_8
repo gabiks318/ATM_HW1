@@ -1,0 +1,18 @@
+
+  cmpl $-1, (num)
+  jne bad_exit
+  cmpl $64, (countBits) # quad word has 64 bits, therfore 64 1's
+  jne bad_exit
+
+  movq $60, %rax
+  movq $0, %rdi
+  syscall
+
+bad_exit:
+  movq $60, %rax
+  movq $1, %rdi
+  syscall
+
+.section .data
+num: .quad -1
+countBits:  .zero 4

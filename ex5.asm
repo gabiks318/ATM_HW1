@@ -3,7 +3,7 @@
 .section .text
 _start:
 #declerations
-    movq $BNode, %rax
+    # movq $BNode, %rax
     xor %rax, %rax      # Current node adress         ????
     xor %rbx, %rbx      # Current node value          ????
     xor %rcx, %rcx      # Source node value           ????
@@ -18,6 +18,8 @@ _start:
     xor %r15, %r15      #father node adress abale
 # load values
     movq head, %rax
+    cmp $0, %rax
+    je end
     leaq head, %r15
     movq %r15, %r12 
     movq (%rax), %rbx

@@ -1,0 +1,70 @@
+Test Results:
+==== ex1.asm tests ====
+ex1.asm tested with test1_1: PASS
+ex1.asm tested with test1_2: PASS
+ex1.asm tested with test1_3: PASS
+ex1.asm tested with test1_4: PASS
+ex1.asm tested with test1_5: PASS
+ex1.asm tested with test1_6: PASS
+ex1.asm tested with test1_7: PASS
+ex1.asm tested with test1_8: PASS
+ex1.asm tested with test1_9: PASS
+==== ex2.asm tests ====
+ex2.asm tested with test2_1: PASS
+ex2.asm tested with test2_2: PASS
+ex2.asm tested with test2_3: PASS
+ex2.asm tested with test2_4: PASS
+==== ex3.asm tests ====
+ex3.asm tested with test3_1: PASS
+ex3.asm tested with test3_2: PASS
+ex3.asm tested with test3_3: PASS
+ex3.asm tested with test3_4: PASS
+ex3.asm tested with test3_5: PASS
+ex3.asm tested with test3_6: PASS
+ex3.asm tested with test3_7: PASS
+ex3.asm tested with test3_8: PASS
+ex3.asm tested with test3_9: PASS
+ex3.asm tested with test3_10: PASS
+ex3.asm tested with test3_11: PASS
+ex3.asm tested with test3_12: PASS
+==== ex4.asm tests ====
+ex4.asm tested with test4_1: PASS
+ex4.asm tested with test4_2: PASS
+ex4.asm tested with test4_3: PASS
+ex4.asm tested with test4_4: PASS
+ex4.asm tested with test4_5: PASS
+ex4.asm tested with test4_6: PASS
+ex4.asm tested with test4_7: PASS
+ex4.asm tested with test4_8: PASS
+ex4.asm tested with test4_9: PASS
+ex4.asm tested with test4_10: PASS
+ex4.asm tested with test4_11: PASS
+ex4.asm tested with test4_12: PASS
+==== ex5.asm tests ====
+ex5.asm tested with test5_1: PASS
+ex5.asm tested with test5_2: PASS
+ex5.asm tested with test5_3: PASS
+ex5.asm tested with test5_4: PASS
+ex5.asm tested with test5_5: PASS
+ex5.asm tested with test5_6: PASS
+ex5.asm tested with test5_7: PASS
+ex5.asm tested with test5_8: PASS
+ex5.asm tested with test5_9: PASS
+ex5.asm tested with test5_10: PASS
+ex5.asm tested with test5_11: PASS
+ex5.asm tested with test5_12: PASS
+ex5.asm tested with test5_13: PASS
+ex5.asm tested with test5_14: PASS
+ex5.asm tested with test5_15: FAIL
+ex5.asm tested with test5_16: PASS
+ex5.asm tested with test5_17: FAIL
+ex5.asm tested with test5_18: PASS
+ex5.asm tested with test5_19: PASS
+ex5.asm tested with test5_20: PASS
+ex5.asm tested with test5_21: FAIL
+ex5.asm tested with test5_22: PASS
+ex5.asm tested with test5_23: PASS
+ex5.asm tested with test5_24: PASS
+ex5.asm tested with test5_25: PASS
+ex5.asm tested with test5_26: FAIL
+ex5.asm tested with test5_27: PASS

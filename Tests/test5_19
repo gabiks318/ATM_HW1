@@ -1,0 +1,18 @@
+  
+  cmpq $NULL, head
+  jne bad
+correct:
+  movq $60, %rax
+  movq $0, %rdi
+  syscall
+bad:
+  movq $60, %rax
+  movq $1, %rdi
+  syscall
+  
+  
+.section .data
+src: .quad 4
+dst: .quad 5
+head: .quad NULL
+.set NULL, 0

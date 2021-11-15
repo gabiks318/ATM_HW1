@@ -1,4 +1,4 @@
-.global _start 
+.global _start
 
 .section .text
 _start:
@@ -10,7 +10,13 @@ _start:
     movq root, %rax
     movq new_node, %rcx
     leaq new_node, %r8
+    cmp $0, %rax
+    je empty_list
+    jmp loop
 
+empty_list:
+    movq %r8, root
+    jmp end
 loop:
     movq (%rax),  %rbx
     cmp %rbx, %rcx

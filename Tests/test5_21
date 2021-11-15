@@ -1,0 +1,42 @@
+  
+  cmpq $ANode, head
+  jne bad
+  cmpq $5, ANode
+  jne bad
+  cmpq $CNode, ANode+8
+  jne bad
+  cmpq $3, CNode
+  jne bad
+  cmpq $BNode, CNode+8
+  jne bad
+  cmpq $4, BNode
+  jne bad
+  cmpq $DNode, BNode+8
+  jne bad
+  cmpq $NULL, DNode+8
+  jne bad
+correct:
+  movq $60, %rax
+  movq $0, %rdi
+  syscall
+bad:
+  movq $60, %rax
+  movq $1, %rdi
+  syscall
+
+# Currently: A, B, C, D
+# Output: A, C, B, D
+  
+.section .data
+src: .quad 4
+dst: .quad 3
+head: .quad ANode
+ANode:  .quad 5
+    .quad BNode
+BNode:  .quad 4
+    .quad CNode
+CNode:  .quad 3
+    .quad DNode
+DNode:  .quad 2
+    .quad NULL
+.set NULL, 0

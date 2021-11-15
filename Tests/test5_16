@@ -1,0 +1,42 @@
+  
+  cmpq $ANode, head
+  jne bad
+  cmpq $7, ANode
+  jne bad
+  cmpq $DNode, ANode+8
+  jne bad
+  cmpq $5, BNode
+  jne bad
+  cmpq $NULL, BNode+8
+  jne bad
+  cmpq $8, CNode
+  jne bad
+  cmpq $BNode, CNode+8
+  jne bad
+  cmpq $4, DNode
+  jne bad
+  cmpq $CNode, DNode+8
+  jne bad
+correct:
+  movq $60, %rax
+  movq $0, %rdi
+  syscall
+bad:
+  movq $60, %rax
+  movq $1, %rdi
+  syscall
+  
+  
+.section .data
+src: .quad 5
+dst: .quad 4
+head: .quad ANode
+ANode:  .quad 7
+    .quad BNode
+BNode:  .quad 5
+    .quad CNode
+CNode:  .quad 8
+    .quad DNode
+DNode:  .quad 4
+    .quad NULL
+.set NULL, 0
