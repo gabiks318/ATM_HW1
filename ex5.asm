@@ -55,7 +55,7 @@ finish_loop:
     je iteration
 switch_values:
     movq 8(%r8), %rbx    # Son of src
-    movq 8(%r10), %r9   # Son of dst
+    movq 8(%r10), %r9    # Son of dst
     cmp %rbx, %r10          #CHECK if dst is right after src
     je dst_right_after_src
                          # Switch src data(father and son)
@@ -69,18 +69,19 @@ switch_values:
     jmp end
     
 dst_right_after_src:
-    #movq (%r10), %rbx
-    #movq (%r8),  %rax
-    movq %r9, 8(%r8)        #src -> son_of_dst
-    movq %r8, 8(%r10)       #dst -> src
-    #movq %rbx, 8(%r13)      #src = dst
-    #movq %rax, (%r10)
+    movq %r9,  8(%r8)
+    movq %r8, 8(%r10)
+    cmp %r12, %r13
+    je super_head_situation
+    movq %r10, 8(%r13)     #father of src
+    #movq %r8,  8(%r14)     #father of dst
     cmp %r12, %r13
     je head_situation
     jmp end
     
 head_situation:
     movq %r10, (%r13)
+super_head_situation:
+    movq %r10, (%r13)
     
 end:    
-
