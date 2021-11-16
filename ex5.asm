@@ -3,7 +3,6 @@
 .section .text
 _start:
 #declerations
-    # movq $BNode, %rax
     xor %rax, %rax      # Current node adress         ????
     xor %rbx, %rbx      # Current node value          ????
     xor %rcx, %rcx      # Source node value           ????
@@ -74,7 +73,6 @@ dst_right_after_src:
     cmp %r12, %r13
     je super_head_situation
     movq %r10, 8(%r13)     #father of src
-    #movq %r8,  8(%r14)     #father of dst
     cmp %r12, %r13
     je head_situation
     jmp end

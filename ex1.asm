@@ -2,7 +2,6 @@
 
 .text
 _start:
-#save to another reg
     movq num, %rax    #copy of num
     xorq %rbx, %rbx   #countBits
     xorq %rcx, %rcx   #loop counter

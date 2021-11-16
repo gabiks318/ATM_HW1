@@ -4,7 +4,6 @@
 
 .text
 _start:
-#your code here
     xor %eax, %eax # num
     movl num, %eax
     cmp $0, %eax
